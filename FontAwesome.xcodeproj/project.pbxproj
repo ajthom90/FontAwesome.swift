@@ -214,9 +214,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8401A8E81B39601400269D14 /* Build configuration list for PBXNativeTarget "FontAwesome" */;
 			buildPhases = (
+				8401A8CF1B39601400269D14 /* Headers */,
 				8401A8CD1B39601400269D14 /* Sources */,
 				8401A8CE1B39601400269D14 /* Frameworks */,
-				8401A8CF1B39601400269D14 /* Headers */,
 				8401A8D01B39601400269D14 /* Resources */,
 			);
 			buildRules = (
@@ -279,7 +279,7 @@
 					};
 					8401A8D11B39601400269D14 = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1330;
 					};
 					8401A8DC1B39601400269D14 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -589,7 +589,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -610,7 +610,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "im.thi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

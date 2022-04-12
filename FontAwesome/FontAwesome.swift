@@ -32,7 +32,7 @@ public extension UIFont {
     ///
     /// - parameter ofSize: The preferred font size.
     /// - returns: A UIFont object of FontAwesome.
-    public class func fontAwesome(ofSize fontSize: CGFloat) -> UIFont {
+    class func fontAwesome(ofSize fontSize: CGFloat) -> UIFont {
         let name = "FontAwesome"
         if UIFont.fontNames(forFamilyName: name).isEmpty {
             FontLoader.loadFont(name)
@@ -50,8 +50,8 @@ public extension String {
     /// - parameter name: The preferred icon name.
     /// - returns: A string that will appear as icon with FontAwesome.
     public static func fontAwesomeIcon(name: FontAwesome) -> String {
-        let toIndex = name.rawValue.characters.index(name.rawValue.startIndex, offsetBy: 1)
-        return String(name.rawValue[name.rawValue.characters.startIndex..<toIndex])
+        let toIndex = name.rawValue.index(name.rawValue.startIndex, offsetBy: 1)
+        return String(name.rawValue[name.rawValue.startIndex..<toIndex])
     }
 
     /// Get a FontAwesome icon string with the given CSS icon code. Icon code can be found here: http://fontawesome.io/icons/
@@ -100,12 +100,12 @@ public extension UIImage {
         let strokeWidth: CGFloat = fontSize == 0 ? 0 : (-100 * borderWidth / fontSize)
 
         let attributedString = NSAttributedString(string: String.fontAwesomeIcon(name: name), attributes: [
-            NSAttributedStringKey.font: UIFont.fontAwesome(ofSize: fontSize),
-            NSAttributedStringKey.foregroundColor: textColor,
-            NSAttributedStringKey.backgroundColor: backgroundColor,
-            NSAttributedStringKey.paragraphStyle: paragraph,
-            NSAttributedStringKey.strokeWidth: strokeWidth,
-            NSAttributedStringKey.strokeColor: borderColor
+            NSAttributedString.Key.font: UIFont.fontAwesome(ofSize: fontSize),
+            NSAttributedString.Key.foregroundColor: textColor,
+            NSAttributedString.Key.backgroundColor: backgroundColor,
+            NSAttributedString.Key.paragraphStyle: paragraph,
+            NSAttributedString.Key.strokeWidth: strokeWidth,
+            NSAttributedString.Key.strokeColor: borderColor
             ])
 
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
